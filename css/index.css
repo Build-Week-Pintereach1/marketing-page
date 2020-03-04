@@ -190,6 +190,11 @@ body h4 {
   font-size: 2.5rem;
   padding-bottom: 10px;
 }
+html h5,
+body h5 {
+  font-size: 1.7rem;
+  padding-bottom: 10px;
+}
 html p,
 body p {
   line-height: 1.5;
@@ -219,7 +224,7 @@ nav {
   display: flex;
   margin-top: 20px;
   width: 50%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .footer {
   display: flex;
@@ -278,11 +283,34 @@ nav {
 .featuretwoimg {
   width: 380px;
 }
+.about-content{
+  display:flex;
+  background-color: #d7fff1;
+}
+.dev {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+.devimg{
+  width:200px;
+  padding-bottom:15px;
+}
 
 /*----Mobile----*/
 @media(max-width:500px){
   body{
     width:500px;
+  }
+  header{
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  nav a {
+    padding-right:10px;
   }
   .container-home{
     display:flex;
@@ -299,5 +327,9 @@ nav {
     flex-direction: column;
     align-items: center;
     padding-top:20px;
+  }
+  .about-content{
+    display:flex;
+    flex-direction: column;
   }
 }
