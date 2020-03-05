@@ -257,6 +257,7 @@ nav {
 .intro img {
   width: 100vw;
   padding-top: 20px;
+  padding-right: 5px;
 }
 .button{
   margin:0 auto;
@@ -296,6 +297,10 @@ nav {
   display:flex;
   background-color: #d7fff1;
 }
+.about-content2{
+  display:flex;
+  background-color: #d7fff1;
+}
 .dev {
   display:flex;
   flex-direction: column;
@@ -315,14 +320,16 @@ nav {
   line-height:1.5em;
   border: solid 5px;
 }
-
+.try{
+  display:none;
+}
 /*----Mobile----*/
 @media(max-width:500px){
   body{
     width:500px;
   }
   header{
-    display:flex;
+    display:none;
     justify-content: space-around;
     text-align: center;
   }
@@ -333,11 +340,17 @@ nav {
     display:flex;
     flex-direction: column;
   }
+  .intro h1{
+    padding-top:100px;
+  }
+  .intro img{
+    padding-top: 0px;
+  }
   .featureone{
     display:flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 100px;
   }
   .featuretwo{
     display:flex;
@@ -348,5 +361,80 @@ nav {
   .about-content{
     display:flex;
     flex-direction: column;
+    padding-top: 100px;
+  }
+  .about-content2{
+    display: flex;
+    flex-direction: column;
+  }
+  .try{
+    display:block;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  #try{
+    display:block;
+    position: absolute;
+    text-align: left;
+    top:100%;
+    left:0;
+    background-color: #d7fff1;
+    width: 100%;
+    margin-top:0;
+    display:none;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  #try ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    padding-top: 5px;
+  }
+  #try li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+  #try a {
+    cursor: pointer;
+  }
+  .nav-toggle:checked ~ #try{
+    display:block;
+  }
+  .nav-toggle {
+    display:none;
+  }
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display:flex;
+    align-items: center;
+  }
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display:block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+  .nav-toggle-label span::before {
+    bottom: 7px;
+  }
+  .nav-toggle-label span::after {
+    top: 7px;
   }
 }
